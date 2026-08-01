@@ -5,8 +5,10 @@ interface IntroSequenceProps {
   onComplete: () => void;
 }
 
-export const IntroSequence: React.forwardRef<HTMLDivElement, IntroSequenceProps> = 
-  React.forwardRef(({ onComplete }, ref) => {
+export const IntroSequence = React.forwardRef<
+  HTMLDivElement,
+  IntroSequenceProps
+>(({ onComplete }, ref) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<SVGTextElement>(null);
     const skipBtnRef = useRef<HTMLButtonElement>(null);
